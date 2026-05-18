@@ -1,0 +1,59 @@
+{
+  "name": "json-tree-merge",
+  "version": "0.1.0",
+  "description": "Scan a directory tree for <group>.json files and merge them into one nested-object JSON per group. Framework-agnostic; great for next-intl locale folding.",
+  "keywords": [
+    "json",
+    "merge",
+    "tree",
+    "i18n",
+    "next-intl",
+    "locale",
+    "messages",
+    "cli"
+  ],
+  "license": "MIT",
+  "author": "sedlukha",
+  "homepage": "https://github.com/sedlukha/json-tree-merge#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sedlukha/json-tree-merge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sedlukha/json-tree-merge/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "json-tree-merge": "./dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.build.json && node scripts/post-build.js",
+    "dev": "tsx src/cli/index.ts",
+    "start": "node dist/cli/index.js",
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "rimraf": "^6.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
+  }
+}
