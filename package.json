@@ -1,6 +1,6 @@
 {
   "name": "json-tree-merge",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Scan a directory tree for <group>.json files and merge them into one nested-object JSON per group. Framework-agnostic; great for next-intl locale folding.",
   "keywords": [
     "json",
