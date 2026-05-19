@@ -6,6 +6,7 @@
     "json",
     "merge",
     "tree",
+    "nested",
     "i18n",
     "next-intl",
     "locale",
